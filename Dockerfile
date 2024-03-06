@@ -28,7 +28,7 @@ RUN bun install
 COPY . .
 FROM oven/bun:1
 COPY --from=builder /build/node_modules ./node_modules
-COPY --from=builder /build/index.mjs ./index.mjs
+COPY --from=builder /build/index.ts ./index.ts
 
 
 # RUN npx playwright install firefox
